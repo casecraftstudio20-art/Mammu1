@@ -1,0 +1,16 @@
+title: Tribute to Rishal 'Mammu'
+description: A beautiful tribute website for our beloved Mammu
+theme: jekyll-theme-minimal
+plugins:
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-default-layout
+  - jekyll-titles-from-headings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+exclude:
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
+  - README.md

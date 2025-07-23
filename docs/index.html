@@ -1,0 +1,516 @@
+---
+layout: default
+title: A Tribute to Rishal 'Mammu'
+description: Celebrating our beloved Mammu with love and laughter
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Tribute to Rishal 'Mammu'</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            color: #1c1e21;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 750px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        h1, h2 {
+            color: #4a00e0;
+            border-bottom: 3px solid rgba(74, 0, 224, 0.3);
+            padding-bottom: 15px;
+            text-align: center;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        .profile-pic {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            margin: 20px auto;
+            border-radius: 50%;
+            border: 6px solid #fff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: float 4s ease-in-out infinite;
+        }
+        .profile-pic:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 15px 40px rgba(74, 0, 224, 0.4);
+        }
+        .dictionary-term {
+            background: linear-gradient(135deg, rgba(74, 0, 224, 0.1), rgba(142, 45, 226, 0.1));
+            border-left: 5px solid #4a00e0;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 15px;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+        .dictionary-term::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+        .dictionary-term:hover::before {
+            left: 100%;
+        }
+        .dictionary-term:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(74, 0, 224, 0.3);
+            border-left-color: #8e2de2;
+        }
+        
+        /* New Styles for Enhanced Features */
+        .quote-section {
+            background: linear-gradient(135deg, rgba(74, 0, 224, 0.15), rgba(142, 45, 226, 0.15));
+            padding: 30px;
+            border-radius: 20px;
+            margin: 30px 0;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+        .quote-section::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-size: 150px;
+            color: rgba(74, 0, 224, 0.1);
+            font-family: serif;
+        }
+        .quote-section h2 {
+            color: #4a00e0;
+            margin-bottom: 20px;
+        }
+        .quote-text {
+            font-size: 1.3em;
+            font-style: italic;
+            color: #333;
+            font-weight: 500;
+        }
+        
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            cursor: pointer;
+            background: linear-gradient(45deg, #4a00e0, #8e2de2);
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        .gallery-item:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(74, 0, 224, 0.4);
+        }
+        .gallery-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.6s;
+        }
+        .gallery-item:hover::before {
+            transform: translateX(100%);
+        }
+        
+        .audio-player {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px 20px;
+            border-radius: 50px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(74, 0, 224, 0.3);
+            transition: all 0.3s ease;
+        }
+        .audio-player:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(74, 0, 224, 0.4);
+        }
+        .music-control {
+            background: linear-gradient(45deg, #4a00e0, #8e2de2);
+            color: white;
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+        }
+        .music-control:hover {
+            transform: scale(1.1) rotate(10deg);
+            box-shadow: 0 5px 15px rgba(74, 0, 224, 0.5);
+        }
+        .music-control.playing {
+            background: linear-gradient(45deg, #28a745, #20c997);
+            animation: pulse 2s infinite;
+        }
+        
+        .floating-hearts {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: -1;
+        }
+        .heart {
+            position: absolute;
+            color: rgba(255, 182, 193, 0.4);
+            font-size: 20px;
+            animation: floatUp 8s infinite ease-in-out;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+        @keyframes floatUp {
+            0% { 
+                transform: translateY(100vh) rotate(0deg) scale(0); 
+                opacity: 0; 
+            }
+            10% { 
+                opacity: 1; 
+                transform: translateY(90vh) rotate(45deg) scale(1); 
+            }
+            90% { 
+                opacity: 1; 
+                transform: translateY(-10vh) rotate(315deg) scale(1); 
+            }
+            100% { 
+                transform: translateY(-20vh) rotate(360deg) scale(0); 
+                opacity: 0; 
+            }
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        /* Animation for elements fading in on scroll */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                margin: 10px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .profile-pic {
+                width: 150px;
+                height: 150px;
+            }
+            .photo-gallery {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            .audio-player {
+                bottom: 20px;
+                right: 20px;
+                padding: 10px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating Hearts Animation -->
+    <div class="floating-hearts" id="hearts"></div>
+    
+    <div class="container">
+        <h1>🎉 A Tribute to Rishal, a.k.a. "Mammu" 🎉</h1>
+        <img src="https://via.placeholder.com/200x200/4a00e0/ffffff?text=Mammu+💜" alt="A picture of Rishal 'Mammu'" class="profile-pic fade-in">
+        
+        <!-- Quote Section -->
+        <div class="quote-section fade-in">
+            <h2>✨ Words of Wisdom</h2>
+            <p class="quote-text">"Life is not about being serious, it's about being Mammu!"</p>
+        </div>
+        
+        <!-- Photo Gallery -->
+        <div class="fade-in">
+            <h2>📸 Memories Through Time</h2>
+            <div class="photo-gallery">
+                <div class="gallery-item">
+                    <div>🎭 Comedy King</div>
+                </div>
+                <div class="gallery-item">
+                    <div>🎪 Show Master</div>
+                </div>
+                <div class="gallery-item">
+                    <div>👑 Mammu Moments</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="fade-in">
+            <h2>📚 The Mammu Dictionary: Key Terms</h2>
+            <p>To truly understand Mammu, you need to know the lingo. Here are the essentials:</p>
+            <div class="dictionary-term"><strong>Kundan (കുന്ദൻ):</strong> A special title for someone who has perfected the art of being hilariously annoying. It's a term of endearment for a person who can get on your nerves and make you laugh in the same breath.</div>
+            <div class="dictionary-term"><strong>Myren (മൈരൻ):</strong> When used between friends, this is a badge of honor. It signifies a lovable rascal, a clever scoundrel, and the kind of unpredictable character who makes life interesting.</div>
+        </div>
+
+        <div class="fade-in">
+            <h2>🎪 The King of 'Show-Off'</h2>
+            <p>Mammu doesn't just live life; he performs it. He has a natural talent for turning even the most simple story into a blockbuster event. Whether he's explaining a concept or just walking into a room, he does it with a unique flair that captures everyone's attention.</p>
+            <p>It's not just showing off—it's a special kind of charisma. He makes the ordinary feel extraordinary, and that's why he's one of a kind!</p>
+        </div>
+    </div>
+
+    <!-- Audio Player -->
+    <div class="audio-player">
+        <button class="music-control" id="musicToggle">
+            <i class="fas fa-play"></i>
+        </button>
+        <span>🎵 Tribute Music</span>
+    </div>
+
+    <script>
+        // Fade in animation
+        document.addEventListener("DOMContentLoaded", function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            const elementsToAnimate = document.querySelectorAll('.fade-in');
+            elementsToAnimate.forEach(el => observer.observe(el));
+        });
+
+        // Floating hearts animation
+        function createHeart() {
+            const hearts = ['💙', '💜', '💖', '✨', '🌟', '💝'];
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (Math.random() * 4 + 4) + 's';
+            heart.style.animationDelay = Math.random() * 2 + 's';
+            document.getElementById('hearts').appendChild(heart);
+
+            setTimeout(() => {
+                if (heart.parentNode) {
+                    heart.remove();
+                }
+            }, 8000);
+        }
+
+        // Create hearts periodically
+        setInterval(createHeart, 3000);
+
+        // Audio control functionality
+        const musicToggle = document.getElementById('musicToggle');
+        let isPlaying = false;
+        let audioContext;
+        let oscillator;
+
+        // Create a simple background tune
+        function playBackgroundMusic() {
+            if (!audioContext) {
+                audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            }
+            
+            if (oscillator) {
+                oscillator.disconnect();
+            }
+            
+            oscillator = audioContext.createOscillator();
+            const gainNode = audioContext.createGain();
+            
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+            
+            oscillator.type = 'sine';
+            oscillator.frequency.setValueAtTime(262, audioContext.currentTime); // C4
+            gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
+            
+            // Simple melody pattern
+            const notes = [262, 294, 330, 349, 392, 440, 494, 523]; // C major scale
+            let noteIndex = 0;
+            
+            const playNote = () => {
+                if (isPlaying && oscillator) {
+                    oscillator.frequency.setValueAtTime(notes[noteIndex % notes.length], audioContext.currentTime);
+                    noteIndex++;
+                    setTimeout(playNote, 800);
+                }
+            };
+            
+            oscillator.start();
+            playNote();
+        }
+
+        function stopBackgroundMusic() {
+            if (oscillator) {
+                oscillator.stop();
+                oscillator.disconnect();
+                oscillator = null;
+            }
+        }
+
+        musicToggle.addEventListener('click', () => {
+            if (isPlaying) {
+                stopBackgroundMusic();
+                musicToggle.innerHTML = '<i class="fas fa-play"></i>';
+                musicToggle.classList.remove('playing');
+                isPlaying = false;
+            } else {
+                playBackgroundMusic();
+                musicToggle.innerHTML = '<i class="fas fa-pause"></i>';
+                musicToggle.classList.add('playing');
+                isPlaying = true;
+            }
+        });
+
+        // Enhanced interactions
+        document.querySelectorAll('.dictionary-term').forEach(term => {
+            term.addEventListener('click', () => {
+                term.style.background = 'linear-gradient(135deg, rgba(74, 0, 224, 0.3), rgba(142, 45, 226, 0.3))';
+                setTimeout(() => {
+                    term.style.background = 'linear-gradient(135deg, rgba(74, 0, 224, 0.1), rgba(142, 45, 226, 0.1))';
+                }, 300);
+            });
+        });
+
+        // Gallery item interactions
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const messages = [
+                    '🎭 Mammu the Comedy Legend!',
+                    '🎪 Master of Entertainment!',
+                    '👑 One and Only Mammu!'
+                ];
+                const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+                
+                // Create temporary message
+                const message = document.createElement('div');
+                message.textContent = randomMessage;
+                message.style.cssText = `
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background: linear-gradient(45deg, #4a00e0, #8e2de2);
+                    color: white;
+                    padding: 20px 30px;
+                    border-radius: 15px;
+                    font-size: 1.5em;
+                    font-weight: bold;
+                    z-index: 9999;
+                    animation: popIn 0.5s ease-out;
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+                `;
+                
+                // Add pop-in animation
+                const style = document.createElement('style');
+                style.textContent = `
+                    @keyframes popIn {
+                        0% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+                        50% { transform: translate(-50%, -50%) scale(1.1); opacity: 1; }
+                        100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+                    }
+                `;
+                document.head.appendChild(style);
+                document.body.appendChild(message);
+                
+                setTimeout(() => {
+                    message.remove();
+                    style.remove();
+                }, 2000);
+            });
+        });
+
+        // Initial hearts
+        for (let i = 0; i < 5; i++) {
+            setTimeout(createHeart, i * 1000);
+        }
+
+        console.log('💜 Mammu tribute website loaded with love! 💜');
+    </script>
+</body>
+</html>
